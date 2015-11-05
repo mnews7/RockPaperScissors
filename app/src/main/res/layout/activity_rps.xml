@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".RPS"
+    android:alpha="1"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbarlayout"></include>
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        app:rb_color="#0099CC"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="6">
+
+    </com.skyfishjy.library.RippleBackground>
+    <ImageButton
+        android:id="@+id/paperBut"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:tag="paperbutt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="false"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/paper"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/paper" />
+
+    <ImageButton
+        android:id="@+id/rockBut"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:tag="rockbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/Rock"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rock" />
+
+    <ImageButton
+        android:id="@+id/scissorsBut"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:tag="scisbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/Scissors"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/scissors" />
+
+
+    <TextView
+        android:id="@+id/Draws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/toolbar"
+        android:padding="6dp"
+        android:text="You've Tied: " />
+
+    <TextView
+        android:id="@+id/Wins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@+id/Draws"
+        android:layout_toEndOf="@+id/Loss"
+        android:layout_toRightOf="@+id/Loss"
+        android:padding="6dp"
+        android:text="You've Won: " />
+
+    <TextView
+        android:id="@+id/Loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Draws"
+        android:layout_toEndOf="@+id/Draws"
+        android:layout_toRightOf="@+id/Draws"
+        android:padding="6dp"
+        android:text="You've Lost: " />
+
+    <TextView
+        android:id="@+id/playertextmove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scissorsBut"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Your Last Move" />
+
+    <TextView
+        android:id="@+id/computertextmove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/playertextmove"
+        android:text="Computer's Last Move" />
+
+    <ImageView
+        android:id="@+id/playermove"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:elevation="8dp"
+        android:layout_alignTop="@+id/computermove"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/computermove"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        android:layout_below="@+id/Wins"
+        android:layout_alignRight="@+id/computertextmove"
+        android:layout_alignEnd="@+id/computertextmove"
+        android:layout_marginTop="78dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/startbutton"
+        android:onClick="startButtonClick"
+        android:typeface="sans"
+
+
+        android:layout_alignBottom="@+id/computertextmove"
+        android:layout_toLeftOf="@+id/computermove"
+        android:layout_toStartOf="@+id/computermove" />
+
+
+
+
+</RelativeLayout>
+

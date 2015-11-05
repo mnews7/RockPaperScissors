@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Rock Paper Scissors</string>
+
+    <string name="Title">Rock Paper Scissors</string>
+    <string name="action_settings">Settings</string>
+    <string name="paper">Paper image</string>
+    <string name="Rock">Rock Image</string>
+    <string name="Scissors">Scissors Image</string>
+    <string name ="scistext">Scissors</string>
+    <string name = "rocktext">Rock</string>
+    <string name = "papertext">Paper</string>
+    <string name = "pChoiceStr">Your Move</string>
+    <string name = "cChoiceStr">Computer\'s Move</string>
+    <string name="score_board">Score Board</string>
+
+
+    <string-array name="moves">
+        <item>Rock</item>
+        <item>Paper</item>
+        <item>Scissors</item>
+    </string-array>
+
+
+</resources>
